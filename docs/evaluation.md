@@ -1,8 +1,8 @@
 # Evaluation and provenance
 
-## Official competition metric versus research metric
+## Evaluation scope
 
-The original challenge brief in this GitHub repository identifies quadratic weighted kappa (QWK) for ordinal triage as the official metric and total ICH volume MAE as a tie-breaker. The experiments below instead selected configurations by three-class macro F1 on the shared DEV split. Macro F1, accuracy, component F1 and Dice do not represent a QWK leaderboard result. No official submission score is established by these experiments.
+Configurations below were selected using three-class macro F1 on the shared DEV split. Accuracy, component F1 and segmentation Dice measure different properties; no independent external validation is reported.
 
 ## Metrics
 
@@ -35,6 +35,6 @@ These are **DEV-selected experiments**, including model checkpoints, thresholds,
 
 ## Limitations
 
-The same 54 DEV series were used repeatedly for architecture and threshold selection. The best observed result is therefore a development selection statistic, not a confidence-bounded estimate of prospective performance. Several positive classes, especially fracture, are rare. A single case can materially alter F1. Training and fusion depend on upstream data and output files that cannot be reconstructed from this source-only repo without the competition dataset and historical baseline outputs. No hidden leaderboard number, final submission artifact, independent external site, or clinical validation is reported.
+The same 54 DEV series were used repeatedly for architecture and threshold selection. The best observed result is therefore a development selection statistic, not a confidence-bounded estimate of prospective performance. Several positive classes, especially fracture, are rare. A single case can materially alter F1. Training and fusion depend on upstream data and output files that cannot be reconstructed from this source-only repo without the original CT data and historical baseline outputs. No complete inference package, independent external site, or clinical validation is reported.
 
 The exploratory dependency notebook (20) reads saved `TEST_LOCKED` predictions and reports diagnostics for that split. For that reason, the repository makes no claim that its full research history preserved a wholly unseen test cohort. Notebook 30, supplied later as a scaffold, contained unset paths and no computed final score; it has not been included as a completed result.

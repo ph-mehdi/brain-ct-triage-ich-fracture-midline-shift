@@ -2,7 +2,7 @@
 
 ## Input organization
 
-The modeling notebooks use the Kaggle-hosted IAAA Brain CT Triage Challenge dataset. They locate a `Data` directory with:
+The modeling notebooks use the IAAA brain CT dataset, provided in a hosted notebook environment. They locate a `Data` directory with:
 
 ```text
 Data/

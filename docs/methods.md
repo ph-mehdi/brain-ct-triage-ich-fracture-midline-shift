@@ -16,6 +16,6 @@ Notebooks 24 and 27 predict slice relevance and ordinal probabilities for `MLS >
 
 ## Series-level triage
 
-The fusion notebooks convert the five predicted hemorrhage volumes, fracture probability, and MLS value to classes 0, 1, or 2 using the decision rule in [`src/brain_ct_triage/triage.py`](../src/brain_ct_triage/triage.py). Thresholds include EDH 30 mL, SDH or IPH 70 mL, total ICH 60 mL, and selected interactions with fracture and MLS at 3 or 5 mm. This is the **implemented challenge rule in the supplied fusion notebooks**, not an independently validated clinical triage policy.
+The fusion notebooks convert the five predicted hemorrhage volumes, fracture probability, and MLS value to classes 0, 1, or 2 using the decision rule in [`src/brain_ct_triage/triage.py`](../src/brain_ct_triage/triage.py). Thresholds include EDH 30 mL, SDH or IPH 70 mL, total ICH 60 mL, and selected interactions with fracture and MLS at 3 or 5 mm. This is the **implemented decision rule in the supplied fusion notebooks**, not an independently validated clinical triage policy.
 
 The search is staged on a shared 54-series DEV set. Notebook 28 yielded its best result using ICH `all2`, the B2 MLS `top3` score for 3 mm at a 0.67 threshold, the `top5` score for 5 mm at a 0.89 threshold, and the pre-existing fracture prediction. Those cutoffs were selected on DEV and should not be interpreted as probability calibration for unseen sites.
